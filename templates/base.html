@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        
+        <title>
+            {% block title %}
+            {{ title }} | Toolbox
+            {% endblock %}
+        </title>
+
+        {% block head %}
+        {% endblock %}
+        
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="https://github.com/Fernando-Medeiros.png">
+
+        <!-- TAILWIND -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+
+    <body class="font-primary bg-[#1A1A26] text-[#BEBDBF]">
+
+        {% include 'navbar.html'%}
+        
+        {% block content %}
+        {% endblock %}
+    
+        {% include 'footer.html'%}
+                
+        {% block script %}
+        <!-- IONICONS -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        {% endblock %}
+
+    </body>
+<html>
