@@ -30,7 +30,7 @@ def home(request):
         
         try:
             youtube = YouTube(request.POST['link'])
-            print(youtube)
+           
         except:
             context['alert'] = 'LINK INVÁLIDO!'
             
@@ -45,7 +45,7 @@ def home(request):
             
 
             filename = filename[filename.rindex('/'):]
-            context['filename'] = '{}{}'.format(path, filename)
+            context['filename'] = 'video{}'.format(filename)
             context['thumbnail'] = youtube.thumbnail_url
 
         

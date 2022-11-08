@@ -48,7 +48,7 @@
 
 
             {% if filename != '' %}                  
-                <a href="{{filename}}" download>            
+                <a href="{% static filename %}" download>            
                     <button class="m-auto p-2 bg-orange-500/50 border border-gray-500/50 text-center w-full rounded text-xl
                         hover:border-white">
                             Download
