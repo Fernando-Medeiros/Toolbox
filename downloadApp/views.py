@@ -30,23 +30,33 @@ def home(request):
         
         try:
             youtube = YouTube(request.POST['link'])
-           
+    
         except:
-            context['alert'] = 'LINK INVÁLIDO!'
+            context['alert'] = 'Link inválido!'
+        
+        else:
             
+            match list(request.POST.keys())[-1]:
 
-        if context['alert'] == "":
+                case 'audio':
+                    try:
+                        filename = youtube.streams.get_audio_only().download(output_path=path)
+                    except:
+                        context['alert'] = 'Não foi possível baixar o áudio'
+
+                case 'video':
+                    try:
+                        request.POST['video']
+                        filename = youtube.streams.get_highest_resolution().download(output_path=path)
+                    except:
+                        context['alert'] = 'Não foi possível baixar video'
 
             try:
-                request.POST['video']
-                filename = youtube.streams.get_highest_resolution().download(output_path=path)
+                filename = filename[filename.rindex('/'):]
+                context['filename'] = 'video{}'.format(filename)
+                context['thumbnail'] = youtube.thumbnail_url
             except:
-                filename = youtube.streams.get_audio_only().download(output_path=path)
-            
-
-            filename = filename[filename.rindex('/'):]
-            context['filename'] = 'video{}'.format(filename)
-            context['thumbnail'] = youtube.thumbnail_url
-
+                pass
         
+
     return render(request, template_name='home.html', context=context)
