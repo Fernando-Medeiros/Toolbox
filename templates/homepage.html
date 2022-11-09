@@ -10,13 +10,136 @@ Home-Page
 {% block content%}
 
 
-<main class="container m-auto p-2 w-screen h-full">
+<main class="container m-auto p-2 w-screen h-auto">
 
-    <section class="m-auto w-full h-full mt-[65px] bg-black/25 h-96">
-        <h1 class="text-center p-2">
-            HomePage
-        <h1>
+    <!-- DOWNLOAD APP -->
+    <section
+        class="flex justify-around items-center mt-[90px] p-2 gap-3 border-b border-l border-gray-500/50 md:flex-row-2 flex-wrap drop-shadow-xl">
+
+        <span class="grid gap-3 text-black">
+            <h2 class="text-2xl bold">
+                Download App
+            </h2>
+            <p>
+                Você pode baixar a sua musica ou video favorito do youtube com o Download-App:
+                <li> Extensão .mp4 </li>
+                <li> Alta resolução </li>
+                <li> Download de videos e musicas </li>
+            </p>
+            <a href="{% url 'downloadApp:home' %}"
+                class="text-center p-2 w-fit transition ease-in-out delay-150 hover:text-white -translate-y-1 hover:scale-110 hover: duration-300 drop-shadow-xl">
+                <ion-icon name="download-outline"
+                    class="text-6xl m-auto text-[#345259] p-2 rounded-lg border border border-black/25 drop-shadow-xl">
+                </ion-icon>
+            </a>
+
+        </span>
+        <img src="{% static 'images/downloadapp.jpg' %}" class="p-2 w-96  rounded-full drop-shadow-xl">
     </section>
+
+
+    <!-- IMAGE APP -->
+    <section
+        class="flex justify-around items-center p-2 gap-3 border-b border-r border-gray-500/50  md:flex-row-2 flex-wrap drop-shadow-xl">
+
+        <img src="{% static 'images/imageapp.jpg' %}" class="p-2 w-96 rounded-full drop-shadow-xl">
+
+        <span class="grid gap-3 text-black">
+            <h2 class="text-2xl bold">
+                Image App
+            </h2>
+            <p>
+                Com o Image-App você pode editar rapidamente as suas imagens (jpg, png):
+                <li> Remover o plano de fundo </li>
+                <li> Converter a extensão </li>
+                <li> Escalonar de forma eficiente </li>
+            </p>
+
+            <a href="{% url 'imageApp:home' %}"
+                class="text-center p-2 w-fit transition ease-in-out delay-150 hover:text-white -translate-y-1 hover:scale-110 hover: duration-300 drop-shadow-xl">
+                <ion-icon name="image-outline"
+                    class="text-6xl m-auto text-[#345259]  p-2 rounded-lg border border border-black/25 drop-shadow-xl">
+                </ion-icon>
+            </a>
+        </span>
+    </section>
+
+
+    <!-- QRCODE APP -->
+    <section
+        class="flex justify-around items-center p-2 gap-3 border-b border-l border-gray-500/50  md:flex-row-2 flex-wrap drop-shadow-xl">
+
+        <span class="grid gap-3 text-black">
+            <h2 class="text-2xl bold">
+                QR-Code App
+            </h2>
+            <p>
+                .......................................................................
+                <li>..............................................</li>
+                <li>..............................................</li>
+            </p>
+            <a href="{% url 'home' %}"
+                class="text-center p-2 w-fit transition ease-in-out delay-150 hover:text-white -translate-y-1 hover:scale-110 hover: duration-300 drop-shadow-xl">
+                <ion-icon name="qr-code-outline"
+                    class="text-6xl m-auto text-[#345259]  p-2 rounded-lg border border border-black/25 drop-shadow-xl">
+                </ion-icon>
+            </a>
+        </span>
+
+        <img src="{% static 'images/qrcodeapp.jpg' %}" class="w-96 rounded-full drop-shadow-xl">
+    </section>
+
+
+    <!-- PDF APP -->
+    <section
+        class="flex justify-around items-center p-2 gap-3 border-b border-r border-gray-500/50  md:flex-row-2 flex-wrap drop-shadow-xl">
+
+        <img src="{% static 'images/pdfapp.jpg' %}" class="p-2 w-96 rounded-full drop-shadow-xl">
+
+        <span class="grid gap-3 text-black">
+            <h2 class="text-2xl bold">
+                Pdf App
+            </h2>
+            <p>
+                .......................................................................
+                <li>..............................................</li>
+                <li>..............................................</li>
+            </p>
+
+            <a href="{% url 'home' %}"
+                class="text-center p-2 w-fit transition ease-in-out delay-150 hover:text-white -translate-y-1 hover:scale-110 hover: duration-300 drop-shadow-xl">
+                <ion-icon name="document-text-outline"
+                    class="text-6xl m-auto text-[#345259]  p-2 rounded-lg border border border-black/25 drop-shadow-xl">
+                </ion-icon>
+            </a>
+        </span>
+    </section>
+
+
+    <!-- ANALYSIS APP -->
+    <section
+        class="flex justify-around items-center p-2 gap-3 border-b border-l border-gray-500/50  md:flex-row-2 flex-wrap drop-shadow-xl">
+
+        <span class="grid gap-3 text-black">
+            <h2 class="text-2xl bold">
+                Analysis App
+            </h2>
+            <p>
+                .......................................................................
+                <li>..............................................</li>
+                <li>..............................................</li>
+            </p>
+            <a href="{% url 'home' %}"
+                class="text-center p-2 w-fit transition ease-in-out delay-150 hover:text-white -translate-y-1 hover:scale-110 hover: duration-300 drop-shadow-xl">
+                <ion-icon name="analytics-outline"
+                    class="text-6xl m-auto text-[#345259]  p-2 rounded-lg border border border-black/25 drop-shadow-xl">
+                </ion-icon>
+            </a>
+        </span>
+
+        <img src="{% static 'images/analysisapp.jpg' %}" class="p-2 w-96 h-96 rounded-full drop-shadow-xl">
+    </section>
+
 
 </main>
 

@@ -24,7 +24,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='homepage.html'), name='home'),
-    path('', include('downloadApp.urls', namespace='downloadApp'))
+    path('', include('downloadApp.urls', namespace='downloadApp')),
+    path('', include('imageApp.urls', namespace='imageApp'))
 ]
 
 

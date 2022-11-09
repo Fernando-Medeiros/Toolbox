@@ -15,6 +15,14 @@ The intention for this project will be to build a website with useful tools for 
 <br>
 
 <div align="center">
-    <p>Video Download</p>
-    <img windth="470" height="300" src="readme/videodownload.png"> 
+    <h2>HomePage</h2>
+    <img windth="470" src="static/readme-assets/homepage.png"> 
 <div>
+
+<br>
+
+<div align="center">
+    <h2>Video Download</h2>
+    <img windth="470" height="500" src="static/readme-assets/videodownload.png"> 
+<div>
+

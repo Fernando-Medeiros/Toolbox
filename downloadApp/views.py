@@ -12,7 +12,7 @@ def home(request):
     path = 'static/video'
 
     context =  {
-        'title': 'Video Download',
+        'title': 'Youtube Download',
         'filename': '',
         'thumbnail': '',
         'alert': '',
@@ -59,4 +59,4 @@ def home(request):
                 pass
         
 
-    return render(request, template_name='home.html', context=context)
+    return render(request, template_name='download-home.html', context=context)
