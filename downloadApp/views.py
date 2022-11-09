@@ -19,12 +19,14 @@ def home(request):
         'form': form
         }
 
+    try:
+        if len(os.listdir(path)) >= 1:
 
-    if len(os.listdir(path)) >= 1:
+            for download in os.listdir(path):
+                os.remove('{}/{}'.format(path, download))
+    except:
+        pass    
 
-        for download in os.listdir(path):
-            os.remove('{}/{}'.format(path, download))
-        
 
     if request.method == "POST":
         
