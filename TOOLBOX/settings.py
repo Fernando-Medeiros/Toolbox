@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import environ
+import os
+
 # Initialise environment variables
-env = environ.Env()
 environ.Env.read_env()
 
 from pathlib import Path
@@ -25,13 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.get_value('SECRET_KEY')
+SECRET_KEY: str = os.getenv('SECRET_KEY', "DON'T FORGET THE SECRET KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(env.get_value('DEBUG'))
+DEBUG: bool = bool(os.getenv('DEBUG', 'False'))
 
-ALLOWED_HOSTS = list(env.get_value('ALLOWED_HOSTS').split(';'))
-
+ALLOWED_HOSTS: list = list(os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(';'))
 
 # Application definition
 
